@@ -55,7 +55,7 @@ const Ragister = () => {
 
     return (
         <div>
-            <h3>Ragister your self</h3>
+            <h3>Register your self</h3>
             <div>
                 <form action="">
                     <input placeholder='name' name="name"  value={data.name} onChange={(e)=>handleChange(e)} type="text" />

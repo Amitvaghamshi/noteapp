@@ -1,6 +1,6 @@
 import './App.css';
 import { Route,Routes } from 'react-router-dom';
-import Ragister from './component/Ragister';
+import Register from './component/Register';
 import Login from './component/Login';
 import Notes from './component/Notes';
 import Home from './component/Home';
@@ -13,7 +13,7 @@ function App() {
 
         <div>
           <Routes>
-              <Route path='/ragister'  element={<Ragister/>} ></Route>
+              <Route path='/register'  element={<Register/>} ></Route>
               <Route path='/login'  element={<Login/>} ></Route>
               <Route path='/notes'  element={<Notes/>} ></Route>
               <Route path='/'  element={<Home/>} ></Route>

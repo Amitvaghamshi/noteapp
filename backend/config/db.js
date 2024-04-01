@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
+require('dotenv').config()
  
-const connection = mongoose.connect("mongodb+srv://amit:qmit@cluster0.gui12rn.mongodb.net/noteapp");
+let url=process.env.MONGO_URL
+const connection = mongoose.connect(url);
 
 module.exports={connection};

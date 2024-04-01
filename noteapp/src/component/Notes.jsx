@@ -1,6 +1,6 @@
 import React from 'react';
+import { BASE_URL } from '../config';
 import AddNote from './AddNote';
-
 const Notes = () => {
 
     let [data,setData]= React.useState([]);
@@ -15,7 +15,7 @@ const Notes = () => {
          headers: myHeaders,
         };
         
-       let response= await fetch(`http://localhost:5000/notes/delete/${id}`,requestOptions);
+       let response= await fetch(`${BASE_URL}/notes/delete/${id}`,requestOptions);
        await response.json();
        getData();
      }
@@ -31,7 +31,7 @@ const Notes = () => {
      headers: myHeaders,
     };
     
-   let response= await fetch("http://localhost:5000/notes",requestOptions);
+   let response= await fetch(`${BASE_URL}/notes`,requestOptions);
    let data= await response.json();
    console.log(data);
    if(data.data){

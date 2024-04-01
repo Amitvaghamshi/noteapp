@@ -10,7 +10,7 @@ const Home = () => {
         <div style={{margin:"40px"}} >
             <h2>WELCOME TO NOTE APP, CREATE YOUR NOTES </h2>
             <button style={btn_style} onClick={()=>navigate("/login")} >LOGIN</button>
-            <button style={{...btn_style,backgroundColor:"teal"}} onClick={()=>navigate("/ragister")} >RAGISTER</button>
+            <button style={{...btn_style,backgroundColor:"teal"}} onClick={()=>navigate("/register")} >RAGISTER</button>
         </div>
     );
 }

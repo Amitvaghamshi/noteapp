@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { BASE_URL } from '../config';
 const Ragister = () => {
 
     let navigate=useNavigate();
@@ -25,7 +25,7 @@ const Ragister = () => {
           redirect: "follow"
         };
         
-        fetch("http://localhost:5000/user/ragister", requestOptions)
+        fetch(`${BASE_URL}/user/ragister`, requestOptions)
           .then((response) =>{
             if(response.ok){
                   alert("USER SAVED");

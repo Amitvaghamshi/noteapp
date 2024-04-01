@@ -1,4 +1,5 @@
 import React from 'react';
+import { BASE_URL } from '../config';
 
 const AddNote = ({getData}) => {
     let initial_data={
@@ -22,7 +23,7 @@ const AddNote = ({getData}) => {
           redirect: "follow"
         };
         
-        fetch("http://localhost:5000/notes/create", requestOptions)
+        fetch(`${BASE_URL}/notes/create`, requestOptions)
           .then((response) => {
                if(response.ok){
                    alert("DATA SAVED");

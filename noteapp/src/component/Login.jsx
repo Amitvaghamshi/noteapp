@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { BASE_URL } from '../config';
 
 const Login = () => {
    
@@ -24,7 +24,7 @@ const Login = () => {
           redirect: "follow"
         };
         
-        fetch("http://localhost:5000/user/login", requestOptions)
+        fetch(`${BASE_URL}/user/login`, requestOptions)
           .then((response) =>{
             return response.json();
           })
